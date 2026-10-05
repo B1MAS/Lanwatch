@@ -6,6 +6,8 @@ body:
   - type: markdown
     attributes:
       value: |
+        Перед заполнением прочитайте [инструкцию «Добавить свой роутер»](https://github.com/B1MAS/lanwatch/blob/main/docs/ADD_ROUTER.md).
+
         Не прикладывайте дампы трафика, резервные копии, пароли, токены, полные ответы API и списки устройств. Безопасный `lanwatch-probe.json` всё равно проверьте вручную перед публикацией.
   - type: input
     id: vendor
@@ -35,3 +37,10 @@ body:
     attributes:
       label: Результат безопасного probe
       description: Приложите вручную проверенный lanwatch-probe.json или вставьте его обезличенное содержимое.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Проверка перед публикацией
+      options:
+        - label: Я проверил файл и убедился, что в нём нет паролей, токенов, cookies, SSID, MAC/IP устройств и других данных моей сети.
+          required: true
