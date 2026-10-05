@@ -1,0 +1,11 @@
+# Use this as the Task Scheduler action, after installing LANwatch in a venv.
+# Set MIWIFI_PASSWORD in the scheduled user's environment outside this file;
+# never place router credentials in the task command line or this script.
+$ErrorActionPreference = 'Stop'
+if (-not $env:MIWIFI_PASSWORD) {
+    throw 'Set MIWIFI_PASSWORD for this Windows user before starting the task.'
+}
+& 'C:\Path\To\lanwatch-venv\Scripts\python.exe' -m lanwatch monitor `
+  --router 'http://192.168.31.1' --adapter miwifi --interval 60 `
+  --data-dir "$env:LOCALAPPDATA\LANwatch"
+exit $LASTEXITCODE

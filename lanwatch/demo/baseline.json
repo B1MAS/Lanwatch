@@ -1,0 +1,10 @@
+{
+  "created_at": 1,
+  "router_model": "RD18",
+  "firmware": "1.0.60",
+  "expected_dns": ["1.1.1.1", "8.8.8.8"],
+  "known_devices": {
+    "AA:BB:CC:DD:EE:01": {"name": "Laptop"}
+  }
+}
+

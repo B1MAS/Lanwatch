@@ -1,0 +1,5 @@
+<!-- Add this localfile block to ossec.conf on a Wazuh agent that can read the file. -->
+<localfile>
+  <location>/absolute/path/lanwatch-events.jsonl</location>
+  <log_format>json</log_format>
+</localfile>

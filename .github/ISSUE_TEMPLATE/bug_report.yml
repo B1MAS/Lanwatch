@@ -1,0 +1,36 @@
+name: Ошибка в LANwatch
+description: Сообщить о воспроизводимой ошибке без публикации данных сети
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Не публикуйте пароли, токены, полные ответы API, экспорты событий, MAC/IP-адреса и имена своих устройств.
+  - type: input
+    id: version
+    attributes:
+      label: Версия LANwatch
+      placeholder: 0.5.1
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Операционная система и Python
+      placeholder: Ubuntu 24.04, Python 3.12
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения
+      description: Используйте обезличенные примеры.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемое и фактическое поведение
+    validations:
+      required: true

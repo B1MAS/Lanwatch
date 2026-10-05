@@ -1,0 +1,13 @@
+{
+  "lanwatch_readonly": {
+    "description": "Read-only ubus calls required by LANwatch experimental adapter",
+    "read": {
+      "ubus": {
+        "session": ["access", "login"],
+        "system": ["board", "info"],
+        "network.interface.wan": ["status"],
+        "dhcp": ["ipv4leases"]
+      }
+    }
+  }
+}

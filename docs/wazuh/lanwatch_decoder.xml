@@ -1,0 +1,5 @@
+<decoder name="lanwatch-json">
+  <type>json</type>
+  <prematch type="pcre2">^\{"source"\s*:\s*"LANwatch"</prematch>
+  <plugin_decoder>JSON_Decoder</plugin_decoder>
+</decoder>

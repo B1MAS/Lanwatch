@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lanwatch"
+version = "0.5.1"
+description = "Local security monitor for small networks"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [{name = "Dmitry Pushnyakov"}]
+classifiers = ["License :: OSI Approved :: GNU General Public License v3 (GPLv3)"]
+
+[project.scripts]
+lanwatch = "lanwatch.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["lanwatch*"]
+
+[tool.setuptools.package-data]
+lanwatch = ["demo/*.json"]

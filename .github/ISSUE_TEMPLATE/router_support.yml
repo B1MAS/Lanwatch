@@ -1,0 +1,37 @@
+name: Поддержка нового роутера
+description: Предложить модель для нового read-only адаптера
+title: "[Router]: "
+labels: [router-support]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Не прикладывайте дампы трафика, резервные копии, пароли, токены, полные ответы API и списки устройств. Безопасный `lanwatch-probe.json` всё равно проверьте вручную перед публикацией.
+  - type: input
+    id: vendor
+    attributes:
+      label: Производитель и модель
+      placeholder: GL.iNet Flint 2 (GL-MT6000)
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Версия прошивки
+    validations:
+      required: true
+  - type: dropdown
+    id: api
+    attributes:
+      label: Известный локальный API
+      options:
+        - OpenWrt ubus
+        - API производителя
+        - Неизвестно
+    validations:
+      required: true
+  - type: textarea
+    id: probe
+    attributes:
+      label: Результат безопасного probe
+      description: Приложите вручную проверенный lanwatch-probe.json или вставьте его обезличенное содержимое.

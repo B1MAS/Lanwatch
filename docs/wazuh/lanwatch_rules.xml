@@ -1,0 +1,52 @@
+<group name="lanwatch,network,">
+  <rule id="100500" level="0">
+    <decoded_as>lanwatch-json</decoded_as>
+    <description>LANwatch event base</description>
+  </rule>
+
+  <rule id="100501" level="12">
+    <if_sid>100500</if_sid>
+    <field name="kind">^wan_down$</field>
+    <description>LANwatch: WAN is unavailable</description>
+  </rule>
+  <rule id="100502" level="10">
+    <if_sid>100500</if_sid>
+    <field name="kind">^dns_changed$</field>
+    <description>LANwatch: DNS servers changed</description>
+  </rule>
+  <rule id="100503" level="8">
+    <if_sid>100500</if_sid>
+    <field name="kind">^unknown_device$</field>
+    <description>LANwatch: new device reported by router API</description>
+  </rule>
+  <rule id="100504" level="8">
+    <if_sid>100500</if_sid>
+    <field name="kind">^wifi_config_changed$</field>
+    <description>LANwatch: Wi-Fi settings changed</description>
+  </rule>
+  <rule id="100505" level="5">
+    <if_sid>100500</if_sid>
+    <field name="kind">^router_reboot$</field>
+    <description>LANwatch: router rebooted</description>
+  </rule>
+  <rule id="100506" level="7">
+    <if_sid>100500</if_sid>
+    <field name="kind">^high_upload$</field>
+    <description>LANwatch: high outbound traffic reported</description>
+  </rule>
+  <rule id="100507" level="4">
+    <if_sid>100500</if_sid>
+    <field name="kind">^device_state$</field>
+    <description>LANwatch: device state changed</description>
+  </rule>
+  <rule id="100508" level="3">
+    <if_sid>100500</if_sid>
+    <field name="kind">^firmware_changed$</field>
+    <description>LANwatch: router firmware changed</description>
+  </rule>
+  <rule id="100509" level="5">
+    <if_sid>100500</if_sid>
+    <field name="kind">^wan_blocked$</field>
+    <description>LANwatch: Internet access blocked for a device</description>
+  </rule>
+</group>

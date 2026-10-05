@@ -1,0 +1,9 @@
+{
+  "captured_at": 1,
+  "router": {"model": "RD18", "firmware": "1.0.60", "uptime": 18000},
+  "wan": {"online": true, "dns": ["1.1.1.1", "8.8.8.8"]},
+  "devices": {
+    "AA:BB:CC:DD:EE:01": {"mac": "AA:BB:CC:DD:EE:01", "name": "Laptop", "online": true, "wan_access": true, "ips": ["192.168.31.10"], "up_bps": 1000}
+  }
+}
+
